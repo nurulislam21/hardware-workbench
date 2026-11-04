@@ -1,0 +1,2530 @@
+/* ==========================================================================
+   1. PREMIUM MULTI-ENGINE DARK & LIGHT THEME TOKENS
+   ========================================================================== */
+
+/* --- THEME 1: OBSIDIAN AMBER (Altium 3D Render Dark — Default) --- */
+:root,
+[data-theme="obsidian"] {
+  --bg: #050608;
+  --bg-raised: rgba(14, 17, 24, 0.86);
+  --bg-panel: rgba(20, 24, 34, 0.92);
+  --sheet-bg: #080a0f;
+  --page-glow:
+    radial-gradient(680px circle at 76% 24%, rgba(255, 115, 0, 0.16), transparent 62%),
+    radial-gradient(560px circle at 20% 18%, rgba(56, 224, 255, 0.06), transparent 60%);
+  --viewport-glow:
+    radial-gradient(circle at 50% 52%, rgba(255, 115, 0, 0.26) 0%, rgba(22, 14, 10, 0.88) 48%, #050608 100%);
+  --ink: #e6ecf5;
+  --ink-soft: #8b98b1;
+  --heading: #ffffff;
+  --field: #ff9f1c;
+  --wire: #10b981;
+  --sym: rgba(255, 255, 255, 0.1);
+  --sheet: rgba(255, 159, 28, 0.32);
+  --jn: #10b981;
+  --led: #10b981;
+  --hover: #ff9f1c;
+  --select: rgba(255, 140, 0, 0.22);
+  --btn-bg: linear-gradient(135deg, #ffaa2b 0%, #ff6a00 100%);
+  --btn-solid: #ff8c00;
+  --btn-ink: #050608;
+  --line: rgba(255, 255, 255, 0.07);
+  --bright: #ff9f1c;
+  --logo-body: #141822;
+  --logo-pin: #ff9f1c;
+  --backdrop: rgba(2, 4, 8, 0.88);
+  --ic-bg: #10141f;
+  --tp1: #ff6a00;
+  --tp2: #00e5ff;
+  --tp3: #10b981;
+}
+
+/* --- THEME 2: CYBER CARBON (Stealth CAD / Neon Cyan Dark) --- */
+[data-theme="cyber"] {
+  --bg: #06080d;
+  --bg-raised: rgba(13, 18, 28, 0.88);
+  --bg-panel: rgba(18, 25, 38, 0.94);
+  --sheet-bg: #080b12;
+  --page-glow:
+    radial-gradient(680px circle at 76% 24%, rgba(0, 229, 255, 0.14), transparent 62%),
+    radial-gradient(560px circle at 18% 25%, rgba(0, 230, 118, 0.06), transparent 60%);
+  --viewport-glow:
+    radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.22) 0%, rgba(10, 18, 30, 0.9) 50%, #05070b 100%);
+  --ink: #e2edf8;
+  --ink-soft: #8499b8;
+  --heading: #ffffff;
+  --field: #00e5ff;
+  --wire: #00e676;
+  --sym: rgba(0, 229, 255, 0.16);
+  --sheet: rgba(0, 229, 255, 0.34);
+  --jn: #00e676;
+  --led: #00e676;
+  --hover: #00e5ff;
+  --select: rgba(0, 229, 255, 0.2);
+  --btn-bg: linear-gradient(135deg, #00f0ff 0%, #0088ff 100%);
+  --btn-solid: #00d0ff;
+  --btn-ink: #04070c;
+  --line: rgba(255, 255, 255, 0.08);
+  --bright: #00e5ff;
+  --logo-body: #0f1826;
+  --logo-pin: #00e5ff;
+  --backdrop: rgba(3, 6, 12, 0.88);
+  --ic-bg: #0d1522;
+  --tp1: #ff2e93;
+  --tp2: #00e5ff;
+  --tp3: #00e676;
+}
+
+/* --- THEME 3: MIDNIGHT PCB (isprithul.me Classic Navy/Gold Dark) --- */
+[data-theme="pcb"] {
+  --bg: #070e1a;
+  --bg-raised: rgba(13, 23, 40, 0.9);
+  --bg-panel: rgba(18, 31, 52, 0.94);
+  --sheet-bg: #091322;
+  --page-glow:
+    radial-gradient(680px circle at 76% 24%, rgba(235, 200, 68, 0.11), transparent 62%),
+    radial-gradient(540px circle at 20% 20%, rgba(92, 225, 230, 0.06), transparent 60%);
+  --viewport-glow:
+    radial-gradient(circle at 50% 50%, rgba(43, 217, 128, 0.16) 0%, rgba(12, 22, 38, 0.92) 52%, #060b14 100%);
+  --ink: #d5deef;
+  --ink-soft: #8fa3c4;
+  --heading: #f4f1ea;
+  --field: #5ce1e6;
+  --wire: #2bd980;
+  --sym: #344c70;
+  --sheet: #3b5378;
+  --jn: #2bd980;
+  --led: #2bd980;
+  --hover: #ebc844;
+  --select: rgba(235, 200, 68, 0.22);
+  --btn-bg: linear-gradient(135deg, #f3d25a 0%, #e0b628 100%);
+  --btn-solid: #ebc844;
+  --btn-ink: #070e1a;
+  --line: #1a2840;
+  --bright: #ebc844;
+  --logo-body: #16243b;
+  --logo-pin: #ebc844;
+  --backdrop: rgba(4, 8, 15, 0.86);
+  --ic-bg: #122038;
+  --tp1: #ff2e93;
+  --tp2: #38e0ff;
+  --tp3: #2bd980;
+}
+
+/* --- THEME 4: STUDIO LIGHT (SOLIDWORKS / Eeschema Light) --- */
+[data-theme="sch"] {
+  --bg: #f5f2eb;
+  --bg-raised: #ece7dc;
+  --bg-panel: #e2dccf;
+  --sheet-bg: #faf8f4;
+  --page-glow: none;
+  --viewport-glow: radial-gradient(circle at 50% 45%, #ffffff 0%, #e4ebf5 68%, #cfd9e8 100%);
+  --ink: #2b2623;
+  --ink-soft: #5a524c;
+  --heading: #841717;
+  --field: #006666;
+  --wire: #008400;
+  --sym: #841717;
+  --sheet: #841717;
+  --jn: #008400;
+  --led: #1ca61c;
+  --hover: #841717;
+  --select: rgba(132, 23, 23, 0.14);
+  --btn-bg: #841717;
+  --btn-solid: #841717;
+  --btn-ink: #f5f2eb;
+  --line: #d8d1c0;
+  --bright: #841717;
+  --logo-body: #841717;
+  --logo-pin: #f5f2eb;
+  --backdrop: rgba(43, 38, 35, 0.65);
+  --ic-bg: #fbf5d9;
+  --tp1: #d60087;
+  --tp2: #008400;
+  --tp3: #006666;
+}
+
+:root {
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --fs-2xl: clamp(1.85rem, 2.8vw, 2.4rem);
+  --fs-xl: 1.2rem;
+  --fs-sm: 0.84rem;
+  --maxw: 1320px;
+  --header-h: 64px;
+  --sec-pad: 64px;
+  --radius: 5px;
+}
+
+/* ==========================================================================
+   2. HARD RESET & SUBTLE PRECISION MICRO-GRID BACKGROUND
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 12px);
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  background-color: var(--bg);
+  background-image:
+    var(--page-glow),
+    linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  text-align: left !important;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+#root {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  text-align: left !important;
+  display: block !important;
+}
+img, svg, iframe { max-width: 100%; display: block; }
+a { color: inherit; }
+p, ul, ol, h1, h2, h3, h4, figure, blockquote, dl, dd { margin: 0; padding: 0; }
+button { font: inherit; color: inherit; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--heading);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+  text-align: left;
+}
+:focus-visible { outline: 2px solid var(--hover); outline-offset: 2px; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+@media (max-width: 768px) {
+  .wrap { padding-inline: 16px; }
+}
+.sec { padding-block: var(--sec-pad); }
+.sec + .sec { border-top: 1px solid var(--line); }
+.sec__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 24px;
+  margin-bottom: 28px;
+}
+.sec__title { font-size: var(--fs-2xl); }
+.sec__title--minor { font-size: clamp(1.45rem, 2.2vw, 1.85rem); }
+
+.mono { font-family: var(--font-mono); }
+.link {
+  color: var(--heading);
+  text-decoration: underline;
+  text-decoration-color: var(--wire);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.link:hover { text-decoration-color: var(--hover); }
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--heading);
+  text-decoration: underline;
+  text-decoration-color: var(--wire);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* ==========================================================================
+   3. GLASSMORPHIC HEADER & 4-PALETTE SWITCHER
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.hdr {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: var(--header-h);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--heading);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.brand__isp { color: var(--field); }
+.logo-mark .lm-body { fill: var(--logo-body); stroke: var(--sym); stroke-width: 1; }
+.logo-mark .lm-pin { fill: var(--logo-pin); }
+.logo-mark .lm-key { fill: var(--led); }
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+.nav a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding: 8px 11px;
+  border-radius: var(--radius);
+  transition: color 0.15s ease;
+}
+.nav a:hover { color: var(--heading); }
+.hdr__tools { display: flex; align-items: center; gap: 10px; }
+.theme-switch {
+  display: inline-flex;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--sym);
+  border-radius: var(--radius);
+  padding: 2px;
+  gap: 2px;
+}
+[data-theme="sch"] .theme-switch {
+  background: rgba(255, 255, 255, 0.6);
+}
+.theme-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0 9px;
+  min-height: 30px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+.theme-switch button:hover { color: var(--heading); }
+.theme-switch button[aria-pressed="true"] {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  box-shadow: 0 2px 10px var(--select);
+}
+@media (max-width: 920px) {
+  .hdr .nav { display: none; }
+  .hdr__tools { margin-left: auto; }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--btn-solid);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.btn--primary {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  box-shadow: 0 4px 20px var(--select);
+}
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--heading);
+  border-color: var(--sym);
+}
+.btn:hover {
+  box-shadow: 0 0 0 4px var(--select), 0 8px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+.btn--sm { min-height: 34px; padding: 5px 12px; font-size: 0.78rem; }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+.led {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--led);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--led) 25%, transparent), 0 0 12px var(--led);
+}
+
+/* ==========================================================================
+   4. HERO + HIGH-CONTRAST 3D VIEWPORT WITH SPECULAR GLASS BORDERS
+   ========================================================================== */
+.hero { padding-block: 34px 58px; }
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.34fr);
+  gap: 42px;
+  align-items: start;
+}
+@media (max-width: 1040px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 32px; }
+}
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero__q-wrap {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  min-height: 44px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+}
+.hero__q-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--field);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tw-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  background: var(--wire);
+  margin-left: 3px;
+  vertical-align: -2px;
+  animation: tw-blink 0.8s steps(2, start) infinite;
+}
+@keyframes tw-blink { to { visibility: hidden; } }
+
+.hero__title {
+  font-size: clamp(2.25rem, 3.5vw, 3.2rem);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  max-width: 16ch;
+}
+.hero__lead {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.56;
+  max-width: 46ch;
+  margin-bottom: 24px;
+}
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.probe-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cad-frame {
+  border: 1px solid var(--sheet);
+  border-radius: 7px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.75),
+    0 0 40px var(--select),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.cad-frame__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 12px;
+  background: rgba(8, 10, 15, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  color: #cbd5e1;
+  flex-wrap: wrap;
+}
+.cad-model-pills {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.cad-pill {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: #94a3b8;
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.cad-pill:hover { color: #fff; border-color: var(--hover); }
+.cad-pill.is-active {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  border-color: transparent;
+  box-shadow: 0 0 14px var(--select);
+}
+
+.cad-stage {
+  position: relative;
+  width: 100%;
+  height: 395px;
+  background: var(--viewport-glow);
+  overflow: hidden;
+}
+.cad-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.signal-hud-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+.signal-path {
+  stroke-dasharray: 10 18;
+  animation: pulse-flow 1.4s linear infinite;
+}
+@keyframes pulse-flow {
+  to { stroke-dashoffset: -56; }
+}
+
+.cad-frame__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  background: rgba(6, 8, 12, 0.92);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #8fa3c4;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.custom-loader-bar {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #0d111a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.custom-loader-bar input[type="text"] {
+  flex: 1;
+  min-width: 180px;
+  padding: 5px 8px;
+  background: #05070b;
+  border: 1px solid var(--sym);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  border-radius: 3px;
+}
+
+/* Test Point Tabs */
+.tp-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.tp-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.tp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 5px 12px;
+  border: 1px solid var(--sym);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.tp-btn:hover { border-color: var(--hover); color: var(--heading); }
+.tp-btn.is-active {
+  border-color: var(--tp-color, var(--hover));
+  color: var(--heading);
+  background: color-mix(in srgb, var(--tp-color, var(--hover)) 16%, var(--bg-raised));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--tp-color, var(--hover)) 24%, transparent);
+  font-weight: 700;
+}
+.tp-marker--dot { width: 7px; height: 7px; border-radius: 50%; background: var(--tp1); box-shadow: 0 0 8px var(--tp1); }
+.tp-marker--ring { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--tp2); box-shadow: 0 0 8px var(--tp2); }
+.tp-marker--sq { width: 7px; height: 7px; border: 1.5px solid var(--tp3); box-shadow: 0 0 8px var(--tp3); }
+
+/* Bottom 2-Column Deck: Left Probe Card + Right Oscilloscope */
+.probe-deck {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: 10px;
+}
+@media (max-width: 640px) { .probe-deck { grid-template-columns: 1fr; } }
+.probe-card {
+  border: 1px solid var(--sheet);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  backdrop-filter: blur(12px);
+  padding: 13px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.probe-card h3 { font-size: 0.98rem; margin-bottom: 3px; }
+.probe-card p { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.44; }
+.probe-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.probe-file-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.file-pill {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  padding: 3px 7px;
+  border: 1px solid var(--sym);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--field);
+}
+
+.scope-box {
+  border: 1px solid var(--sym);
+  border-radius: var(--radius);
+  background: #04060a;
+  color: #d5deef;
+  padding: 10px 13px;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image:
+    linear-gradient(rgba(255, 159, 28, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 159, 28, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.8);
+}
+.scope-box__top, .scope-box__bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.scope-box__trig { color: var(--field); }
+.scope-box__svg { width: 100%; height: 60px; margin-block: 3px; }
+
+/* ==========================================================================
+   5. SCROLL-DRIVEN 5-STAGE 3D PIPELINE WITH AUTHENTIC WORKSPACE INTERFACES
+   ========================================================================== */
+.pipeline-scroll-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 1020px) {
+  .pipeline-scroll-wrap { grid-template-columns: 1fr; }
+}
+.pipeline-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+  padding-block: 2vh 12vh;
+}
+@media (max-width: 1020px) {
+  .pipeline-steps { gap: 14px; padding-block: 0; }
+}
+.pipe-step-card {
+  border: 1px solid var(--sym);
+  border-radius: 6px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(12px);
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.pipe-step-card.is-active {
+  border-color: var(--hover);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px var(--select);
+  transform: translateX(4px);
+}
+.pipe-step-card__num {
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  color: var(--field);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.pipe-step-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.pipe-step-card p { font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 10px; }
+
+.sticky-workspace {
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  border: 1px solid var(--sheet);
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.75), 0 0 36px var(--select);
+}
+
+.wk-chrome--mcad { background: #f1f5f9; color: #0f172a; border-color: #64748b; }
+.wk-chrome--ecad { background: #0c0f17; color: #e2e8f0; border-color: var(--sheet); }
+.wk-chrome--fw   { background: #14161b; color: #d4d4d4; border-color: #007acc; }
+
+.wk-titlebar {
+  padding: 7px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+}
+.wk-ribbon {
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+}
+.wk-main-grid {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) 205px;
+  min-height: 420px;
+}
+@media (max-width: 860px) {
+  .wk-main-grid { grid-template-columns: 1fr; }
+}
+.wk-tree-pane {
+  padding: 10px;
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.wk-inspector-pane {
+  padding: 10px;
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wk-center-stage {
+  position: relative;
+  height: 420px;
+  background: var(--viewport-glow);
+  overflow: hidden;
+}
+.wk-footer-bar {
+  padding: 6px 12px;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.layer-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+.layer-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 7px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 2px;
+  font-size: 0.65rem;
+}
+.layer-dot { width: 7px; height: 7px; border-radius: 1px; }
+
+/* ==========================================================================
+   6. HIGH-CONTRAST OBSIDIAN PROJECT CARDS, STATS & MODALS
+   ========================================================================== */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border: 1px solid var(--sym);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  color: var(--heading);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  transition: all 0.15s ease;
+}
+.chip:hover { border-color: var(--hover); }
+.chip[aria-pressed="true"] {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 2px 14px var(--select);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--sym);
+  border-radius: 6px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: all 0.22s ease;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--hover);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.7), 0 0 24px var(--select);
+}
+.card__cad-viewport {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 140, 0, 0.14) 0%, #06080d 100%);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.card__badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border: 1px solid var(--sym);
+  border-radius: 3px;
+  background: rgba(5, 6, 8, 0.88);
+  color: var(--hover);
+}
+.card__ext {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(0, 229, 255, 0.12);
+  color: #00e5ff;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px;
+  flex: 1;
+}
+.card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: var(--field);
+}
+.card__title { font-size: 1.1rem; line-height: 1.18; }
+.card__line { color: var(--ink-soft); font-size: 0.88rem; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--sym);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 28px;
+}
+@media (max-width: 760px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stat { background: var(--bg-raised); padding: 18px; display: grid; gap: 4px; }
+.stat__n { font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; color: var(--heading); }
+.stat__l { font-family: var(--font-mono); font-size: 0.75rem; color: var(--field); }
+
+.svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 720px) { .svc-grid { grid-template-columns: 1fr; } }
+.svc {
+  border: 1px solid var(--sym);
+  border-radius: 6px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(12px);
+  padding: 22px;
+  display: grid;
+  gap: 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.svc__ref { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--field); }
+
+.tblock {
+  border: 1px solid var(--sheet);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  background: var(--bg-raised);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+.tblock > * { padding: 24px; }
+.tblock__main { border-right: 1px solid var(--line); display: grid; gap: 14px; align-content: start; }
+.tblock__cells { display: grid; grid-template-rows: repeat(3, auto); padding: 0; }
+.tblock__cell { padding: 14px 20px; border-bottom: 1px solid var(--line); display: grid; gap: 4px; }
+.tblock__cell:last-child { border-bottom: 0; }
+.tblock__k { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; color: var(--field); }
+.tblock__v { font-family: var(--font-mono); font-size: 0.9rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 760px) { .tblock { grid-template-columns: 1fr; } .tblock__main { border-right: 0; border-bottom: 1px solid var(--line); } }
+.copy-btn { min-height: 32px; padding: 3px 10px; border: 1px solid var(--sym); border-radius: var(--radius); background: transparent; color: var(--heading); font-family: var(--font-mono); font-size: 0.74rem; cursor: pointer; }
+
+.site-footer { border-top: 1px solid var(--line); padding-block: 28px; }
+.ftr { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; }
+.ftr__links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--font-mono); font-size: var(--fs-sm); }
+.ftr__links a { text-decoration: none; }
+.ftr__silk { width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--field); border-top: 1px solid var(--line); padding-top: 14px; }
+
+.dlg { padding: 0; border: 1px solid var(--sheet); border-radius: 7px; background: var(--bg); color: var(--ink); width: min(1040px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: hidden; box-shadow: 0 28px 70px rgba(0, 0, 0, 0.85); }
+.dlg--brief { width: min(640px, calc(100vw - 32px)); }
+.dlg::backdrop { background: var(--backdrop); backdrop-filter: blur(6px); }
+.dlg[open] { display: flex; flex-direction: column; }
+.dlg__close { position: absolute; right: 12px; top: 12px; z-index: 5; width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--sym); border-radius: var(--radius); background: var(--bg); color: var(--heading); cursor: pointer; }
+.qv { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); min-height: 0; flex: 1; overflow: auto; }
+@media (max-width: 780px) { .qv { grid-template-columns: 1fr; } }
+.qv__media { background: var(--viewport-glow); min-height: 380px; border-right: 1px solid var(--line); }
+.qv__info { padding: 24px; display: flex; flex-direction: column; gap: 12px; overflow: auto; }
+.qv__facts { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 7px 16px; font-family: var(--font-mono); font-size: 0.78rem; border-top: 1px solid var(--line); padding-top: 12px; }
+.qv__facts dt { color: var(--field); }
+.bom-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.73rem; margin-top: 6px; }
+.bom-table th, .bom-table td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; }
+.bom-table th { background: var(--bg-raised); color: var(--field); }
+.brief { display: grid; gap: 14px; padding: 24px; overflow: auto; }
+.brief__row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (max-width: 560px) { .brief__row { grid-template-columns: 1fr; } }
+.field { display: grid; gap: 6px; }
+.field label { font-family: var(--font-mono); font-size: 0.75rem; color: var(--field); }
+.field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid var(--sym); border-radius: var(--radius); background: var(--bg-raised); color: var(--ink); font: inherit; }
+.field textarea { min-height: 100px; resize: vertical; }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 300; background: var(--heading); color: var(--bg); font-family: var(--font-mono); font-size: 0.8rem; padding: 10px 16px; border-radius: var(--radius); }
+
+/* ==========================================================================
+   7. UPGRADED SCROLL-DRIVEN 3D HARDWARE LIFECYCLE WORKSTATION
+   ========================================================================== */
+.lc-wrapper {
+  display: grid;
+  grid-template-columns: 350px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 1060px) {
+  .lc-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Scroll Cards with Continuous Progress Rail */
+.lc-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18vh;
+  padding-block: 2vh 14vh;
+  padding-left: 22px;
+  border-left: 2px solid rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 1060px) {
+  .lc-rail {
+    gap: 14px;
+    padding-block: 0;
+  }
+}
+.lc-card {
+  position: relative;
+  border: 1px solid var(--sym);
+  border-radius: 6px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(12px);
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lc-card::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--sym);
+  transition: all 0.25s ease;
+}
+.lc-card.is-active {
+  border-color: var(--hover);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55), 0 0 24px var(--select);
+  transform: translateX(4px);
+}
+.lc-card.is-active::before {
+  background: var(--hover);
+  border-color: var(--hover);
+  box-shadow: 0 0 12px var(--hover);
+}
+.lc-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--field);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.lc-card h3 {
+  font-size: 1.14rem;
+  margin-bottom: 6px;
+}
+.lc-card p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.48;
+  margin-bottom: 12px;
+}
+.lc-progress-bar {
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.lc-progress-fill {
+  height: 100%;
+  background: var(--btn-bg);
+  transition: width 0.25s ease;
+}
+
+/* Right Sticky Morphing OS / Engineering Application Window */
+.lc-window {
+  position: sticky;
+  top: calc(var(--header-h) + 14px);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid var(--sheet);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.75), 0 0 36px var(--select);
+  transition: all 0.3s ease;
+}
+
+/* --- STAGE-SPECIFIC APPLICATION THEMES --- */
+.lc-window--plan {
+  background: #070b12;
+  color: #e2edf8;
+  border-color: #00e5ff;
+}
+.lc-window--mcad {
+  background: #f1f4f9;
+  color: #1e293b;
+  border-color: #94a3b8;
+}
+.lc-window--ecad {
+  background: #0b0d13;
+  color: #e2e8f0;
+  border-color: #ff9f1c;
+}
+.lc-window--fw {
+  background: #18181b;
+  color: #d4d4d8;
+  border-color: #007acc;
+}
+.lc-window--ready {
+  background: #070a0f;
+  color: #e6edf8;
+  border-color: #10b981;
+}
+
+/* Top Window Titlebar & Stage Quick-Jump Tabs */
+.lc-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.lc-window--mcad .lc-titlebar {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.lc-window--plan .lc-titlebar,
+.lc-window--ecad .lc-titlebar,
+.lc-window--ready .lc-titlebar {
+  background: #10141f;
+}
+.lc-window--fw .lc-titlebar {
+  background: #252526;
+}
+
+.lc-stage-pills {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.lc-stage-pill {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.lc-stage-pill:hover { opacity: 1; }
+.lc-stage-pill.is-on {
+  opacity: 1;
+  background: #ff9f1c;
+  color: #050608;
+  border-color: #ff9f1c;
+}
+.lc-window--mcad .lc-stage-pill.is-on {
+  background: #0078d4;
+  color: #ffffff;
+  border-color: #0078d4;
+}
+
+/* Application Command Ribbon */
+.lc-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  flex-wrap: wrap;
+}
+.lc-window--mcad .lc-ribbon {
+  background: #f8fafc;
+  color: #0f172a;
+}
+.lc-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.32);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lc-window--mcad .lc-tool-btn {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+.lc-tool-btn.is-active {
+  background: #ff9f1c;
+  color: #050608;
+  border-color: #ff9f1c;
+  font-weight: 700;
+}
+.lc-window--mcad .lc-tool-btn.is-active {
+  background: #0078d4;
+  color: #ffffff;
+  border-color: #0078d4;
+}
+
+/* Main Workspace Split Grid */
+.lc-body {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr) 210px;
+  height: 455px;
+}
+@media (max-width: 880px) {
+  .lc-body {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.lc-left-tree {
+  padding: 10px;
+  border-right: 1px solid rgba(128, 128, 128, 0.22);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+.lc-tree-row {
+  padding: 4px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lc-tree-row:hover,
+.lc-tree-row.is-selected {
+  background: rgba(255, 159, 28, 0.16);
+}
+.lc-window--mcad .lc-tree-row:hover,
+.lc-window--mcad .lc-tree-row.is-selected {
+  background: rgba(0, 120, 212, 0.14);
+  color: #0078d4;
+  font-weight: 700;
+}
+
+/* Center 3D Viewport + Floating Overlays */
+.lc-viewport {
+  position: relative;
+  height: 455px;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Floating Heads-Up View Toolbar inside Stage 02 (SOLIDWORKS style) */
+.lc-hud-pillbar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: #0f172a;
+}
+
+/* Picture-in-Picture Interactive Schematic Overlay in Stage 03 */
+.lc-pip-sch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 6;
+  width: 230px;
+  background: rgba(10, 14, 22, 0.94);
+  border: 1.5px solid #ff9f1c;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  transition: all 0.22s ease;
+}
+.lc-pip-sch.is-expanded {
+  inset: 10px;
+  width: auto;
+}
+
+/* Split VS Code + Ubuntu Purple CLI Overlay in Stage 04 */
+.lc-ide-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52%;
+  z-index: 6;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  border-top: 2px solid #007acc;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+}
+@media (max-width: 720px) {
+  .lc-ide-overlay {
+    grid-template-columns: 1fr;
+  }
+}
+.lc-ide-code {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 8px 10px;
+  overflow-y: auto;
+  border-right: 1px solid #333;
+}
+.lc-ubuntu-term {
+  background: #2c001e;
+  color: #f2f2f2;
+  padding: 8px 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lc-right-insp {
+  padding: 10px;
+  border-left: 1px solid rgba(128, 128, 128, 0.22);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+/* ==========================================================================
+   8. SLEEK FULL-BLEED 3D SHOWCASE STAGE + FLOATING GLASS HUDS
+   ========================================================================== */
+.showcase3d {
+  border: 1px solid var(--sheet);
+  border-radius: 8px;
+  background: var(--bg-raised);
+  overflow: hidden;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.78),
+    0 0 40px var(--select),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Horizontal 5-Stage Precision Stepper */
+.showcase3d__stepper {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  background: rgba(6, 8, 13, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 900px) {
+  .showcase3d__stepper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.showcase3d__step {
+  padding: 13px 16px;
+  border: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  background: transparent;
+  color: var(--ink-soft);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.showcase3d__step:last-child {
+  border-right: 0;
+}
+.showcase3d__step:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--heading);
+}
+.showcase3d__step.is-active {
+  background: rgba(255, 159, 28, 0.08);
+  color: var(--heading);
+}
+.showcase3d__step-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+}
+.showcase3d__step-num {
+  color: var(--field);
+  font-weight: 700;
+}
+.showcase3d__step-file {
+  opacity: 0.65;
+}
+.showcase3d__step-title {
+  font-family: var(--font-display);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+.showcase3d__step-bar {
+  height: 2px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+.showcase3d__step-fill {
+  height: 100%;
+  background: var(--btn-bg);
+  transition: width 0.3s ease;
+}
+
+/* Main Full-Width 3D Stage */
+.showcase3d__stage {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background: var(--viewport-glow);
+  overflow: hidden;
+}
+.showcase3d__canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+.showcase3d__canvas:active {
+  cursor: grabbing;
+}
+
+/* Top-Left Floating Glass HUD Card */
+.showcase3d__hud-card--tl {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 6;
+  max-width: 375px;
+  padding: 16px 18px;
+  border-radius: 7px;
+  background: rgba(8, 11, 18, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  pointer-events: auto;
+}
+@media (max-width: 760px) {
+  .showcase3d__hud-card--tl {
+    max-width: calc(100% - 32px);
+    padding: 12px;
+  }
+}
+.showcase3d__hud-kicker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--field);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.showcase3d__file-tag {
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(255, 159, 28, 0.14);
+  border: 1px solid rgba(255, 159, 28, 0.35);
+  color: #fff;
+}
+.showcase3d__hud-card--tl h3 {
+  font-size: 1.12rem;
+  margin-bottom: 6px;
+}
+.showcase3d__hud-card--tl p {
+  font-size: 0.81rem;
+  color: var(--ink-soft);
+  line-height: 1.46;
+  margin-bottom: 10px;
+}
+.showcase3d__layer-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Top-Right Floating Action Controls */
+.showcase3d__hud-controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  background: rgba(8, 11, 18, 0.78);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Floating Right-Side Schematic / Firmware Drawer */
+.showcase3d__drawer {
+  position: absolute;
+  top: 64px;
+  right: 16px;
+  z-index: 7;
+  width: min(420px, calc(100% - 32px));
+  border-radius: 7px;
+  background: rgba(8, 11, 18, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--field);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+.showcase3d__drawer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--field);
+}
+
+/* Bottom Telemetry & Stage Navigation Bar */
+.showcase3d__bottom-bar {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 7px;
+  background: rgba(8, 11, 18, 0.82);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.showcase3d__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+}
+.showcase3d__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-mono);
+}
+.showcase3d__metric-k {
+  font-size: 0.63rem;
+  color: var(--ink-soft);
+}
+.showcase3d__metric-v {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #fff;
+}
+.showcase3d__nav-btns {
+  display: flex;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   8. CLEAN ARCHITECTURAL 3D HARDWARE LIFECYCLE (ISPRITHUL + ALTIUM 3D STYLE)
+   ========================================================================== */
+.pipe-timeline {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  margin-bottom: 28px;
+  padding: 0;
+}
+@media (max-width: 860px) {
+  .pipe-timeline {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+.pipe-node {
+  position: relative;
+  padding: 24px 14px 12px 0;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+.pipe-node::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  height: 2px;
+  background: var(--line);
+  transition: background-color 0.25s ease;
+}
+.pipe-node::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--sym);
+  transition: all 0.25s ease;
+}
+.pipe-node:last-child::before {
+  width: 24px;
+  right: auto;
+}
+.pipe-node.is-passed::before {
+  background: var(--wire);
+}
+.pipe-node.is-passed::after {
+  background: var(--wire);
+  border-color: var(--wire);
+}
+.pipe-node.is-current {
+  color: var(--heading);
+}
+.pipe-node.is-current::after {
+  background: var(--hover);
+  border-color: var(--hover);
+  box-shadow: 0 0 0 4px var(--select), 0 0 14px var(--hover);
+}
+.pipe-node__code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--field);
+  margin-bottom: 3px;
+}
+.pipe-node__title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+/* Main 2-Column Scrollytelling Grid (Clean Spec Cards Left + Full-Bleed 3D Right) */
+.pipe-deck {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.42fr);
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 1020px) {
+  .pipe-deck {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pipe-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16vh;
+  padding-block: 2vh 12vh;
+}
+@media (max-width: 1020px) {
+  .pipe-cards-col {
+    gap: 14px;
+    padding-block: 0;
+  }
+}
+
+.pipe-spec-card {
+  border: 1.5px solid var(--sym);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  padding: 20px 22px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.pipe-spec-card:hover {
+  border-color: var(--hover);
+}
+.pipe-spec-card.is-active {
+  border-color: var(--hover);
+  box-shadow: 0 0 0 4px var(--select), 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+.pipe-spec-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--field);
+  margin-bottom: 8px;
+}
+.pipe-spec-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+.pipe-spec-card p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.52;
+  margin-bottom: 14px;
+}
+.pipe-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+.pipe-metric-k {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--ink-soft);
+}
+.pipe-metric-v {
+  font-weight: 700;
+  color: var(--heading);
+}
+
+/* Right Unobstructed Full-Bleed 3D Stage */
+.pipe-stage-sticky {
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  border: 1.5px solid var(--sheet);
+  border-radius: 6px;
+  background: var(--viewport-glow);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 32px var(--select);
+}
+
+/* Minimal Floating Glass Top Bar */
+.pipe-hud-top {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  pointer-events: none;
+}
+.pipe-hud-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 6px;
+  background: rgba(8, 11, 16, 0.82);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--sym);
+  border-radius: 4px;
+  pointer-events: auto;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+.pipe-hud-btn {
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.pipe-hud-btn:hover {
+  color: var(--heading);
+}
+.pipe-hud-btn.is-on {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+/* Floating Translucent Drawer for 2D Schematic or Bare-Metal ISR Code */
+.pipe-floating-drawer {
+  position: absolute;
+  left: 12px;
+  bottom: 48px;
+  z-index: 5;
+  max-width: 360px;
+  background: rgba(7, 10, 15, 0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--sheet);
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  color: var(--ink);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Minimal Floating Bottom Status Bar */
+.pipe-hud-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  background: rgba(6, 8, 12, 0.92);
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pipe-layer-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.pipe-layer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border: 1px solid var(--sym);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ink);
+  font-size: 0.66rem;
+  cursor: pointer;
+}
+.pipe-layer-pill.is-off {
+  opacity: 0.35;
+}
+
+/* ==========================================================================
+   8. CLEAN ARCHITECTURAL 3D HARDWARE LIFECYCLE (ISPRITHUL + ALTIUM 3D STYLE)
+   ========================================================================== */
+.pipe-timeline {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  margin-bottom: 28px;
+  padding: 0;
+}
+@media (max-width: 860px) {
+  .pipe-timeline {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+.pipe-node {
+  position: relative;
+  padding: 24px 14px 12px 0;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+.pipe-node::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  height: 2px;
+  background: var(--line);
+  transition: background-color 0.25s ease;
+}
+.pipe-node::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--sym);
+  transition: all 0.25s ease;
+}
+.pipe-node:last-child::before {
+  width: 24px;
+  right: auto;
+}
+.pipe-node.is-passed::before {
+  background: var(--wire);
+}
+.pipe-node.is-passed::after {
+  background: var(--wire);
+  border-color: var(--wire);
+}
+.pipe-node.is-current {
+  color: var(--heading);
+}
+.pipe-node.is-current::after {
+  background: var(--hover);
+  border-color: var(--hover);
+  box-shadow: 0 0 0 4px var(--select), 0 0 14px var(--hover);
+}
+.pipe-node__code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--field);
+  margin-bottom: 3px;
+}
+.pipe-node__title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+/* Main 2-Column Scrollytelling Grid (Clean Spec Cards Left + Full-Bleed 3D Right) */
+.pipe-deck {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.42fr);
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 1020px) {
+  .pipe-deck {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pipe-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16vh;
+  padding-block: 2vh 12vh;
+}
+@media (max-width: 1020px) {
+  .pipe-cards-col {
+    gap: 14px;
+    padding-block: 0;
+  }
+}
+
+.pipe-spec-card {
+  border: 1.5px solid var(--sym);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  padding: 20px 22px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.pipe-spec-card:hover {
+  border-color: var(--hover);
+}
+.pipe-spec-card.is-active {
+  border-color: var(--hover);
+  box-shadow: 0 0 0 4px var(--select), 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+.pipe-spec-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--field);
+  margin-bottom: 8px;
+}
+.pipe-spec-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+.pipe-spec-card p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.52;
+  margin-bottom: 14px;
+}
+.pipe-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+.pipe-metric-k {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--ink-soft);
+}
+.pipe-metric-v {
+  font-weight: 700;
+  color: var(--heading);
+}
+
+/* Right Unobstructed Full-Bleed 3D Stage */
+.pipe-stage-sticky {
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  border: 1.5px solid var(--sheet);
+  border-radius: 6px;
+  background: var(--viewport-glow);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 32px var(--select);
+}
+
+/* Minimal Floating Glass Top Bar */
+.pipe-hud-top {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  pointer-events: none;
+}
+.pipe-hud-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 6px;
+  background: rgba(8, 11, 16, 0.82);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--sym);
+  border-radius: 4px;
+  pointer-events: auto;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+.pipe-hud-btn {
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.pipe-hud-btn:hover {
+  color: var(--heading);
+}
+.pipe-hud-btn.is-on {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+/* Floating Translucent Drawer for 2D Schematic or Bare-Metal ISR Code */
+.pipe-floating-drawer {
+  position: absolute;
+  left: 12px;
+  bottom: 48px;
+  z-index: 5;
+  max-width: 360px;
+  background: rgba(7, 10, 15, 0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--sheet);
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  color: var(--ink);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Minimal Floating Bottom Status Bar */
+.pipe-hud-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  background: rgba(6, 8, 12, 0.92);
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pipe-layer-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.pipe-layer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border: 1px solid var(--sym);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ink);
+  font-size: 0.66rem;
+  cursor: pointer;
+}
+.pipe-layer-pill.is-off {
+  opacity: 0.35;
+}
+
+/* ==========================================================================
+   7. UPGRADED SCROLL-DRIVEN 3D HARDWARE LIFECYCLE WORKSTATION
+   ========================================================================== */
+.lc-wrapper {
+  display: grid;
+  grid-template-columns: 350px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 1060px) {
+  .lc-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Scroll Cards with Continuous Progress Rail */
+.lc-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18vh;
+  padding-block: 2vh 14vh;
+  padding-left: 22px;
+  border-left: 2px solid rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 1060px) {
+  .lc-rail {
+    gap: 14px;
+    padding-block: 0;
+  }
+}
+.lc-card {
+  position: relative;
+  border: 1px solid var(--sym);
+  border-radius: 6px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(12px);
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lc-card::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--sym);
+  transition: all 0.25s ease;
+}
+.lc-card.is-active {
+  border-color: var(--hover);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55), 0 0 24px var(--select);
+  transform: translateX(4px);
+}
+.lc-card.is-active::before {
+  background: var(--hover);
+  border-color: var(--hover);
+  box-shadow: 0 0 12px var(--hover);
+}
+.lc-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--field);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.lc-card h3 {
+  font-size: 1.14rem;
+  margin-bottom: 6px;
+}
+.lc-card p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.48;
+  margin-bottom: 12px;
+}
+.lc-progress-bar {
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.lc-progress-fill {
+  height: 100%;
+  background: var(--btn-bg);
+  transition: width 0.25s ease;
+}
+
+/* Right Sticky Morphing OS / Engineering Application Window */
+.lc-window {
+  position: sticky;
+  top: calc(var(--header-h) + 14px);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid var(--sheet);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.75), 0 0 36px var(--select);
+  transition: all 0.3s ease;
+}
+
+/* --- STAGE-SPECIFIC APPLICATION THEMES --- */
+.lc-window--plan {
+  background: #070b12;
+  color: #e2edf8;
+  border-color: #00e5ff;
+}
+.lc-window--mcad {
+  background: #f1f4f9;
+  color: #1e293b;
+  border-color: #94a3b8;
+}
+.lc-window--ecad {
+  background: #0b0d13;
+  color: #e2e8f0;
+  border-color: #ff9f1c;
+}
+.lc-window--fw {
+  background: #18181b;
+  color: #d4d4d8;
+  border-color: #007acc;
+}
+.lc-window--ready {
+  background: #070a0f;
+  color: #e6edf8;
+  border-color: #10b981;
+}
+
+/* Top Window Titlebar & Stage Quick-Jump Tabs */
+.lc-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.lc-window--mcad .lc-titlebar {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.lc-window--plan .lc-titlebar,
+.lc-window--ecad .lc-titlebar,
+.lc-window--ready .lc-titlebar {
+  background: #10141f;
+}
+.lc-window--fw .lc-titlebar {
+  background: #252526;
+}
+
+.lc-stage-pills {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.lc-stage-pill {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.lc-stage-pill:hover { opacity: 1; }
+.lc-stage-pill.is-on {
+  opacity: 1;
+  background: #ff9f1c;
+  color: #050608;
+  border-color: #ff9f1c;
+}
+.lc-window--mcad .lc-stage-pill.is-on {
+  background: #0078d4;
+  color: #ffffff;
+  border-color: #0078d4;
+}
+
+/* Application Command Ribbon */
+.lc-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  flex-wrap: wrap;
+}
+.lc-window--mcad .lc-ribbon {
+  background: #f8fafc;
+  color: #0f172a;
+}
+.lc-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.32);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lc-window--mcad .lc-tool-btn {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+.lc-tool-btn.is-active {
+  background: #ff9f1c;
+  color: #050608;
+  border-color: #ff9f1c;
+  font-weight: 700;
+}
+.lc-window--mcad .lc-tool-btn.is-active {
+  background: #0078d4;
+  color: #ffffff;
+  border-color: #0078d4;
+}
+
+/* Main Workspace Split Grid */
+.lc-body {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr) 210px;
+  height: 455px;
+}
+@media (max-width: 880px) {
+  .lc-body {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.lc-left-tree {
+  padding: 10px;
+  border-right: 1px solid rgba(128, 128, 128, 0.22);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+.lc-tree-row {
+  padding: 4px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lc-tree-row:hover,
+.lc-tree-row.is-selected {
+  background: rgba(255, 159, 28, 0.16);
+}
+.lc-window--mcad .lc-tree-row:hover,
+.lc-window--mcad .lc-tree-row.is-selected {
+  background: rgba(0, 120, 212, 0.14);
+  color: #0078d4;
+  font-weight: 700;
+}
+
+/* Center 3D Viewport + Floating Overlays */
+.lc-viewport {
+  position: relative;
+  height: 455px;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Floating Heads-Up View Toolbar inside Stage 02 (SOLIDWORKS style) */
+.lc-hud-pillbar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: #0f172a;
+}
+
+/* Picture-in-Picture Interactive Schematic Overlay in Stage 03 */
+.lc-pip-sch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 6;
+  width: 230px;
+  background: rgba(10, 14, 22, 0.94);
+  border: 1.5px solid #ff9f1c;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  transition: all 0.22s ease;
+}
+.lc-pip-sch.is-expanded {
+  inset: 10px;
+  width: auto;
+}
+
+/* Split VS Code + Ubuntu Purple CLI Overlay in Stage 04 */
+.lc-ide-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52%;
+  z-index: 6;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  border-top: 2px solid #007acc;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+}
+@media (max-width: 720px) {
+  .lc-ide-overlay {
+    grid-template-columns: 1fr;
+  }
+}
+.lc-ide-code {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 8px 10px;
+  overflow-y: auto;
+  border-right: 1px solid #333;
+}
+.lc-ubuntu-term {
+  background: #2c001e;
+  color: #f2f2f2;
+  padding: 8px 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lc-right-insp {
+  padding: 10px;
+  border-left: 1px solid rgba(128, 128, 128, 0.22);
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}

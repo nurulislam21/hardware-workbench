@@ -1,0 +1,642 @@
+/* src/styles/workbench.css */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --maxw: 1320px;
+  --radius: 4px;
+}
+
+/* ==========================================================================
+   1. ALTIUM DESIGNER THEME (ECAD / .PcbDoc)
+   ========================================================================== */
+[data-engine="altium"] {
+  --bg: #0f1015;
+  --bg-panel: #181a22;
+  --bg-viewport: #090a0d;
+  --ink: #e2e6f0;
+  --ink-soft: #949cb0;
+  --accent: #ff3b30;        /* Altium Top Layer Red */
+  --accent-sec: #007aff;    /* Altium Bottom Layer Blue */
+  --pad-gold: #f5c242;      /* Multi-Layer Gold Pad */
+  --silk: #f2f2f7;          /* Top Overlay */
+  --mech: #bf5af2;          /* Mechanical 1 */
+  --border: #2c3040;
+  --status-bg: #1f222d;
+  --status-ink: #f5c242;
+  --grid-dot: rgba(255, 255, 255, 0.14);
+}
+
+/* ==========================================================================
+   2. SOLIDWORKS THEME (MCAD / .SLDASM)
+   ========================================================================== */
+[data-engine="solidworks"] {
+  --bg: #18202c;
+  --bg-panel: #212b3a;
+  --bg-viewport: linear-gradient(180deg, #27374d 0%, #526d82 55%, #9db2bf 100%);
+  --ink: #f0f4f8;
+  --ink-soft: #a7b8cc;
+  --accent: #00a8e8;        /* SOLIDWORKS Selection Blue */
+  --accent-sec: #ff9f1c;    /* SOLIDWORKS Feature Highlight Orange */
+  --pad-gold: #2ec4b6;
+  --silk: #ffffff;
+  --mech: #ffbf69;
+  --border: #36465d;
+  --status-bg: #0f1722;
+  --status-ink: #00a8e8;
+  --grid-dot: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   3. VS CODE + PLATFORMIO THEME (IDE / .cpp)
+   ========================================================================== */
+[data-engine="vscode"] {
+  --bg: #181818;
+  --bg-panel: #252526;
+  --bg-viewport: #1e1e1e;
+  --ink: #d4d4d4;
+  --ink-soft: #858585;
+  --accent: #007acc;        /* VS Code Blue */
+  --accent-sec: #f58220;    /* PlatformIO Orange */
+  --pad-gold: #dcdcaa;      /* Function Yellow */
+  --silk: #4ec9b0;          /* Type Teal */
+  --mech: #c586c0;          /* Keyword Purple */
+  --border: #333337;
+  --status-bg: #007acc;
+  --status-ink: #ffffff;
+  --grid-dot: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* ---------- Top Engineering Toolbar Header ---------- */
+.wb-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--bg-panel) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.wb-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 62px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.wb-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.wb-brand__badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 3px 7px;
+  border-radius: 3px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+.wb-nav {
+  display: flex;
+  gap: 18px;
+}
+.wb-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.wb-nav a:hover {
+  color: var(--ink);
+}
+
+/* ---------- Engine Mode Switcher (Altium | SOLIDWORKS | VS Code) ---------- */
+.engine-switch {
+  display: inline-flex;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3px;
+  gap: 4px;
+}
+.engine-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 11px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.engine-btn:hover {
+  color: var(--ink);
+}
+.engine-btn.is-active {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* ---------- Hero Layout ---------- */
+.wb-hero {
+  padding-block: 36px 56px;
+}
+.wb-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.38fr);
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 1080px) {
+  .wb-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.wb-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--accent-sec);
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+.wb-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.4vw, 2.95rem);
+  line-height: 1.06;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+.wb-bio {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  margin: 0 0 22px;
+  max-width: 54ch;
+}
+.wb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.wb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  background: var(--bg-panel);
+  color: var(--ink);
+}
+.wb-btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.wb-specs-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+.wb-spec-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 10px 12px;
+}
+.wb-spec-box__k {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+}
+.wb-spec-box__v {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   THE 3-IN-1 INTERACTIVE CAD / IDE WORKBENCH FRAME
+   ========================================================================== */
+.cad-window {
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-panel);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Window File Tabs */
+.cad-tabs {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.cad-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 0;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.cad-tab.is-active {
+  background: var(--bg-panel);
+  color: var(--ink);
+  border-top: 2px solid var(--accent);
+  font-weight: 700;
+}
+
+/* Sub-Toolbar inside Window */
+.cad-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 14px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+}
+.cad-tool-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.cad-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+.cad-tool-btn.is-on {
+  border-color: var(--accent);
+  color: var(--ink);
+  background: color-mix(in srgb, var(--accent) 20%, var(--bg));
+}
+
+/* Main Split Body inside Window (Tree/Sidebar + Viewport + Inspector) */
+.cad-body {
+  display: grid;
+  grid-template-columns: 195px minmax(0, 1fr) 210px;
+  min-height: 390px;
+}
+@media (max-width: 860px) {
+  .cad-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Sidebar: FeatureManager / Netlist / File Explorer */
+.cad-tree {
+  border-right: 1px solid var(--border);
+  background: var(--bg-panel);
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cad-tree__head {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.cad-tree__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  text-align: left;
+  cursor: pointer;
+}
+.cad-tree__item:hover,
+.cad-tree__item.is-selected {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  color: #fff;
+}
+
+/* Center Canvas Viewport */
+.cad-viewport {
+  position: relative;
+  background: var(--bg-viewport);
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.cad-svg {
+  width: 100%;
+  height: 330px;
+  display: block;
+  user-select: none;
+}
+
+/* Altium Bottom Layer Tabs */
+.altium-layers {
+  display: flex;
+  gap: 2px;
+  padding: 4px 8px;
+  background: #12131a;
+  border-top: 1px solid var(--border);
+  overflow-x: auto;
+}
+.layer-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border: 1px solid #2c3040;
+  background: #1a1c26;
+  color: #949cb0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  cursor: pointer;
+}
+.layer-tab.is-visible {
+  color: #fff;
+  border-color: var(--ink-soft);
+}
+.layer-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+}
+
+/* Right Properties / DRC / Mass Inspector */
+.cad-inspector {
+  border-left: 1px solid var(--border);
+  background: var(--bg-panel);
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cad-prop-group {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+.cad-prop-label {
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  display: block;
+}
+.cad-prop-val {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* VS Code Editor & Serial Plotter Styles */
+.vsc-editor {
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  height: 220px;
+}
+.vsc-line {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  padding-inline: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.vsc-line:hover,
+.vsc-line.is-active {
+  background: rgba(0, 122, 204, 0.22);
+}
+.vsc-ln {
+  color: #5a5a5a;
+  text-align: right;
+  user-select: none;
+}
+.vsc-terminal {
+  border-top: 1px solid var(--border);
+  background: #141414;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+/* Window Bottom Status Bar */
+.cad-statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 12px;
+  background: var(--status-bg);
+  color: var(--status-ink);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+/* ---------- Projects Grid ---------- */
+.wb-sec {
+  padding-block: 56px;
+  border-top: 1px solid var(--border);
+}
+.wb-sec__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.wb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+.wb-card {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.wb-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.wb-card__media {
+  position: relative;
+  aspect-ratio: 16/10;
+  background: #000;
+  border-bottom: 1px solid var(--border);
+}
+.wb-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wb-card__ext {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(15, 16, 21, 0.88);
+  color: var(--pad-gold);
+  border: 1px solid var(--border);
+}
+.wb-card__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.wb-card__meta {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: var(--accent-sec);
+  display: flex;
+  justify-content: space-between;
+}
+.wb-card__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+.wb-card__desc {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  flex: 1;
+}
+.wb-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.wb-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: 2px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+}
+
+/* ---------- Modal Dialog ---------- */
+.wb-dlg {
+  width: min(920px, calc(100vw - 32px));
+  background: var(--bg-panel);
+  color: var(--ink);
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  padding: 0;
+}
+.wb-dlg::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+.wb-dlg__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+}
+.wb-dlg__body {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 24px;
+}
+@media (max-width: 720px) {
+  .wb-dlg__body {
+    grid-template-columns: 1fr;
+  }
+}
